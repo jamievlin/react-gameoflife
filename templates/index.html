@@ -9,15 +9,10 @@
     {% endif %}
         <script src="https://unpkg.com/react@17/umd/react.{{ react_suffix }}.js" crossorigin></script>
         <script src="https://unpkg.com/react-dom@17/umd/react-dom.{{ react_suffix }}.js" crossorigin></script>
-
-    {% if use_jsx %}
-
-    {% endif %}
 </head>
 <body>
-    Hello world, flask!
-    {% if is_production %}
-        This is production code
-    {% endif %}
+    <div id="reactapp"></div>
+
+    <script src="{{ url_for('static', filename='react/app.js')}}"></script>
 </body>
 </html>
