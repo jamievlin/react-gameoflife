@@ -1,0 +1,23 @@
+<!doctype HTML>
+<html lang="en">
+<head>
+    <title>Game of Life</title>
+    {% if dev_mode %}
+        {% set react_suffix = 'development' %}
+    {% else %}
+        {% set react_suffix = 'production.min' %}
+    {% endif %}
+        <script src="https://unpkg.com/react@17/umd/react.{{ react_suffix }}.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.{{ react_suffix }}.js" crossorigin></script>
+
+    {% if use_jsx %}
+
+    {% endif %}
+</head>
+<body>
+    Hello world, flask!
+    {% if is_production %}
+        This is production code
+    {% endif %}
+</body>
+</html>
