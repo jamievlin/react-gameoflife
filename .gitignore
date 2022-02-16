@@ -558,3 +558,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,react,python,flask,node,intellij,windows,linux
+
+scripts/react/**.js
+static/react/**.js
