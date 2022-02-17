@@ -12,7 +12,8 @@
 </head>
 <body>
     <div id="reactapp"></div>
-
-    <script src="{{ url_for('static', filename='react/app.js')}}"></script>
+    {% for scriptname in scripts %}
+        <script src="{{ url_for('static', filename='react/{0}.js'.format(scriptname))}}"></script>
+    {% endfor %}
 </body>
 </html>

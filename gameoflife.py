@@ -9,7 +9,8 @@ DEV_MODE = True
 def homepage():
     return render_template(
         'index.html',
-        dev_mode=DEV_MODE)
+        dev_mode=DEV_MODE,
+        scripts=['cell', 'app'])
 
 if __name__ == '__main__':
     app.run(debug=DEV_MODE)
