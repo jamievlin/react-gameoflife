@@ -1,3 +1,8 @@
+interface AppProps {
+    width: number,
+    height: number
+}
+
 interface AppState {
     checkedState: boolean[][]
     intervalId: number | undefined
@@ -35,6 +40,11 @@ class App extends React.Component<AppProps, AppState> {
                 intervalId: undefined
         };
         // this.handleCellChange = this.handleCellChange.bind(this);
+    }
+
+    static defaultProps: AppProps = {
+        width: 20,
+        height: 30
     }
 
     invert = () => {
@@ -135,6 +145,6 @@ class App extends React.Component<AppProps, AppState> {
 }
 
 ReactDOM.render(
-    <App />,
+    <App width={45} height={40} />,
     document.getElementById('reactapp')
 );
